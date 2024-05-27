@@ -10,8 +10,7 @@ load_dotenv()
 API_Key = os.getenv('TRELLIX_API_KEY')
 Client_ID = os.getenv('CLIENT_ID')
 Client_Secret = os.getenv('CLIENT_SECRET')
-
-scope = os.getenv('SCOPES')
+Scopes = os.getenv('SCOPES')
 
 
 def get_access_token(client_id, client_secret, scope):
@@ -19,7 +18,7 @@ def get_access_token(client_id, client_secret, scope):
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
     data = {
         'grant_type': 'client_credentials',
-        'scope': scope,
+        'scope': scopes,
         'audience': 'trellix'
     }
     auth = (client_id, client_secret)
@@ -78,7 +77,7 @@ def insigths_iocs(api_key, access_token):
         pprint(e)
 
 
-token = get_access_token(Client_ID, Client_Secret, scope)
+token = get_access_token(Client_ID, Client_Secret, Scopes)
 
 insigths_events(API_Key, token)
 insigths_iocs(API_Key, token)
