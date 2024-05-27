@@ -9,7 +9,7 @@ Script para acessar os endpoints do Insigths
     pip install requests python-dotenv
 ```
 
-2 - Crie um arquivo .env com as credenciais fornececida no portal [developer](https://developer.manage.trellix.com/mvision/selfservice/access_manag)
+2 - Crie um arquivo .env com as credenciais fornecida no portal [developer](https://developer.manage.trellix.com/mvision/selfservice/access_manag)
 
 ```bash
     TRELLIX_API_KEY=dASDGFASDGF******
