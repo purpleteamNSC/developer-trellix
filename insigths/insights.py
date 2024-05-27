@@ -13,7 +13,7 @@ Client_Secret = os.getenv('CLIENT_SECRET')
 Scopes = os.getenv('SCOPES')
 
 
-def get_access_token(client_id, client_secret, scope):
+def get_access_token(client_id, client_secret, scopes):
     url = 'https://iam.mcafee-cloud.com/iam/v1.1/token'
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
     data = {
