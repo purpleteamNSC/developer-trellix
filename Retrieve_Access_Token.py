@@ -22,18 +22,14 @@ def get_access_token(client_id, client_secret, scope, audience):
         print(f"Error: {response.status_code}")
         return None
 
-# Exemplo de uso:
-# client_id = '<CLIENT_ID>'
-# client_secret = '<CLIENT_SECRET>'
-# scope = '<Scope required(space separated). Scope should be from the list of scope approved for the ClientType>'
-# audience = 'trellix'
 
-# access_token = get_access_token(client_id, client_secret, scope, audience)
-# if access_token:
-#     print("Access token:", access_token)
-# else:
-#     print("Failed to get access token.")
+client_id = os.getenv('CLIENT_ID')
+client_secret = os.getenv('CLIENT_SECRET')
+scope = os.getenv('SCOPES')
+audience = 'trellix'
 
-api = os.getenv('TRELLIX_API_KEY')
-
-print(api)
+access_token = get_access_token(client_id, client_secret, scope, audience)
+if access_token:
+    print("Access token:", access_token)
+else:
+    print("Failed to get access token.")
