@@ -11,7 +11,7 @@ API_Key = os.getenv('TRELLIX_API_KEY')
 Client_ID = os.getenv('CLIENT_ID')
 Client_Secret = os.getenv('CLIENT_SECRET')
 
-SCOPES = os.getenv('SCOPES')
+scope = os.getenv('SCOPES')
 
 
 def get_access_token(client_id, client_secret, scope):
