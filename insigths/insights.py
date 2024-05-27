@@ -78,7 +78,7 @@ def insigths_iocs(api_key, access_token):
         pprint(e)
 
 
-token = get_access_token(Client_ID, Client_Secret, SCOPES)
+token = get_access_token(Client_ID, Client_Secret, scope)
 
 insigths_events(API_Key, token)
 insigths_iocs(API_Key, token)
