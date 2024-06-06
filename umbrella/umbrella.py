@@ -99,17 +99,12 @@ def add_destination_to_list(token,ioc):
 
 
 # HOMOLOGAÇÃO 
-
 token = get_umbrella_token(key, secret)
 
 if token:
-    # for list in get_destination_list(token):
-    #     print()
-    #     pprint(list)
     add_destination_to_list(token,'bet365.com')
     add_destination_to_list(token,'www.bet365.com')
     add_destination_to_list(token,'https://www.bet365.com/#/HO/')
-    
 else:
     print("Falha ao obter o token.")
 
