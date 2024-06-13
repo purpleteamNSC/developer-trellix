@@ -102,9 +102,9 @@ def add_destination_to_list(token,ioc):
 token = get_umbrella_token(key, secret)
 
 if token:
-    add_destination_to_list(token,'bet365.com')
-    add_destination_to_list(token,'www.bet365.com')
     add_destination_to_list(token,'https://www.bet365.com/#/HO/')
+    add_destination_to_list(token,'www.bet365.com')
+    add_destination_to_list(token,'bet365.com')
 else:
     print("Falha ao obter o token.")
 
